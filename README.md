@@ -1,4 +1,4 @@
-# Looks like we've made our First Contract!
+# Smart contracts with Solidity
 
 ![contract](https://image.shutterstock.com/z/stock-photo-two-hands-handshake-polygonal-low-poly-hud-illustration-smart-contract-agreement-blockchain-and-1161295627.jpg)
 
@@ -106,8 +106,11 @@ Double check in Ganache, if the deposit was executed
 To confirm the designated distribution has been executed in Ganache, in my project:
 
 firstcontract wallet: 0x70CCCA3498657c7329767B3aEb8Ad85378912520
+
 employee_one: 0x621b469a1b3ee1c15fD9602c2A2eD48622f05039
+
 employee_two: 0xB3242f892003217419fAaBd4AE2F677003086C61
+
 employee_three: 0x1fd5d5322C6e1855012BAf9f5942A21235Dd5c44
 
 ![](Images/transfer.jpg)
@@ -172,8 +175,11 @@ Using the starter code, within the `deposit` function, perform the following:
 In this contract, I used a different wallets so instead of draining the same wallets, I used the following wallets:
 
 2ndcontract wallet: 0xB3242f892003217419fAaBd4AE2F677003086C61
+
 employee_one: 0x621b469a1b3ee1c15fD9602c2A2eD48622f05039
+
 employee_two: 0x70CCCA3498657c7329767B3aEb8Ad85378912520
+
 employee_three: 0x6a5057953c77233b25204c8ecCe3b5c5368C6ED8
 
 ![](Images/transfer2.jpg)
@@ -235,9 +241,9 @@ you should perform the following:
 
   * The final `if` statement provided checks that in case the employee does not cash out until 5+ years after the contract start, the contract does not reward more than the `total_shares` agreed upon in the contract.
 
-## Deploy and test your contract locally.
+## Deploy and test your contract locally using the TimeLock Functionality.
 
-  * For this contract, test the timelock functionality by adding a new variable called `uint fakenow = now;` as the first line of the contract, then replace every other instance of `now` with `fakenow`. Utilize the following `fastforward` function to manipulate `fakenow` during testing.
+  * Test the timelock functionality by adding a new variable called `uint fakenow = now;` as the first line of the contract, then replace every other instance of `now` with `fakenow`. Utilize the following `fastforward` function to manipulate `fakenow` during testing.
 
   * Add this function to "fast forward" time by 100 days when the contract is deployed (requires setting up `fakenow`):
 
@@ -250,6 +256,22 @@ you should perform the following:
   * Once you are satisfied with your contract's logic, revert the `fakenow` testing logic.
 
 
+![](Images/deploygas.jpg)
+
+**Deployment Transaction Hash**
+
+![](Images/deployhash.jpg)
+
+**Contract Creation on Ganache**
+![](Images/contract3.jpg)
+
+**Distribution of 50 Ether but yet paid**
+
+![](Images/distribue.jpg)
+
+
+
+
 </details>
 
 <details>
@@ -259,6 +281,33 @@ you should perform the following:
 Once you feel comfortable with your contracts, point MetaMask to the Kovan or Ropsten network. Ensure you have test Ether on this network!
 
 After switching MetaMask to Kovan, deploy the contracts as before and copy/keep a note of their deployed addresses. The transactions will also be in your MetaMask history, and on the blockchain permanently to explore later.
+
+  - In Kovan network, I used 2 websites to fund my account, you can use [Kovan network](https://faucet.kovan.network/) but it's timely & quantity limited, you can only used once every 24 hours.
+  - Another great source is [kovan-testnet/faucet](https://gitter.im/kovan-testnet/faucet#) once you are verified, which is easy can be done by signing in with your GitHub account. In the comment section you paste your wallet address & you can ask up till 4 Ether; larger quantities take longer approval process.
+  - I transfer wei instead of Ether, because of the limited quantity on hand but you can check all transactions on [EtherScan](https://etherscan.io/) and since in this testnet I used the same wallet accross the board, here is the all transactions including contract creation
+
+
+      
+                                  Transaction History
+
+![](Images/history.jpg)
+
+
+          AssociateProfitSplitter Contract - Deposit Confirmation 
+
+![](Images/1out.jpg)
+
+          TieredProfitSplitter Contract - Deposit Confirmation
+
+![](Images/2out.jpg)
+
+
+          DeferredEquityPlan Contract - - Deposit Confirmation
+
+![](Images/3out.jpg)
+
+
+
 
 </details>
 

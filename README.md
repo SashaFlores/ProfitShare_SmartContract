@@ -293,18 +293,6 @@ After switching MetaMask to Kovan, deploy the contracts as before and copy/keep 
 ![](Images/history.jpg)
 
 
-          AssociateProfitSplitter Contract - Deposit Confirmation 
-
-![](Images/1out.jpg)
-
-          TieredProfitSplitter Contract - Deposit Confirmation
-
-![](Images/2out.jpg)
-
-
-          DeferredEquityPlan Contract - - Deposit Confirmation
-
-![](Images/3out.jpg)
 
 
 

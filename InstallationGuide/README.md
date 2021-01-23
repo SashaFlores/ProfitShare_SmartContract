@@ -1,4 +1,4 @@
-# Unit 20 Installation Guide
+# Installation Guide
 
 ## Installing MetaMask
 
